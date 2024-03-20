@@ -21,7 +21,7 @@ pipeline{
     }
     stage('upload artifact'){
         steps{
-            sh 'curl --upload-file target/bioMedical-0.0.1-SNAPSHOT.jar -u admin/devops -v http://198.58.119.40:8081/repository/Amara/'
+            sh 'curl --upload-file target/bioMedical-0.0.1-SNAPSHOT.jar -u admin/devops -v http://ec2-34-204-95-60.compute-1.amazonaws.com:8081/#admin/repository/repositories:maven-nexus-repo'
         }
     }    
     }
